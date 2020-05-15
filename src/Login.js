@@ -8,8 +8,20 @@ const Login = () => {
   const dispatch = useDispatch()
   return (
     <form onSubmit={handleSubmit((values) => dispatch(loginUser(values)))}>
-      <input type="email" name="email" ref={register} required />
-      <input type="password" name="password" ref={register} required />
+      <input
+        type="email"
+        name="email"
+        ref={register}
+        defaultValue="eve.holt@reqres.in"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        ref={register}
+        defaultValue="cityslicka"
+        required
+      />
       <input type="submit" name="Submit" />
     </form>
   )
